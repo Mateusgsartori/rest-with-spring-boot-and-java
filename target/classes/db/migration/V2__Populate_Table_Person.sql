@@ -1,0 +1,10 @@
+INSERT INTO person VALUES (1,'123 Main St, New York, NY','John','male','Doe'),
+    (2,'456 Oak Ave, San Francisco, CA','Jane','female','Smith'),
+    (3,'789 Pine Rd, Chicago, IL','Robert','male','Johnson'),
+    (4,'321 Maple Dr, Austin, TX','Emily','female','Davis'),
+    (5,'654 Elm St, Seattle, WA','Michael','male','Brown'),
+    (6,'987 Cedar Ln, Denver, CO','Laura','female','Wilson'),
+    (7,'111 Birch Blvd, Miami, FL','William','male','Anderson'),
+    (8,'222 Spruce St, Boston, MA','Olivia','female','Taylor'),
+    (9,'333 Ash Ct, Phoenix, AZ','James','male','Thomas'),
+    (10,'444 Palm Way, Los Angeles, CA','Sophia','female','Moore');
