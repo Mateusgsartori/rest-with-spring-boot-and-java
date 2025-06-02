@@ -8,12 +8,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/controllers/GreetingController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/model/Greeting.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/controllers/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/controllers/PersonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/service/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/service/PersonService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/controllers/GreetingController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/model/Greeting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/controllers/PersonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/controllers/PersonController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/service/PersonService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/service/PersonService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,18 +27,18 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Record" />
-        <option value="Class" />
         <option value="Interface" />
         <option value="Exception" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2xv9yT0RTuvTiCDdTGYrnPpuLp0" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -48,6 +48,7 @@
   "keyToString": {
     "Application.RestWithSpringBootAndJavaApplication.executor": "Run",
     "Application.StartUp.executor": "Debug",
+    "JUnit.ObjectMapperTests.executor": "Run",
     "Maven.rest-with-spring-boot-and-java [clean...].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -57,7 +58,13 @@
     "settings.editor.selected.configurable": "project.propCompiler"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\a\spring\rest-with-spring-boot-and-java\src\test\java\rest_with_spring_boot_and_java\unittests\mapper\mocks" />
+      <recent name="C:\a\spring\rest-with-spring-boot-and-java\src\test\java\rest_with_spring_boot_and_java\unittests\mapper" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.StartUp">
     <configuration name="StartUp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -73,9 +80,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ObjectMapperTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rest-with-spring-boot-and-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="rest_with_spring_boot_and_java.unittests.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="rest_with_spring_boot_and_java.unittests.mapper" />
+      <option name="MAIN_CLASS_NAME" value="rest_with_spring_boot_and_java.unittests.mapper.ObjectMapperTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.StartUp" />
+        <item itemvalue="JUnit.ObjectMapperTests" />
       </list>
     </recent_temporary>
   </component>

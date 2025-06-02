@@ -13,4 +13,8 @@ spring:
       hibernate:
     show-sql: false
     open-in-view: false
+logging:
+  level:
+    rest-with-spring-boot-and-java: DEBUG
+
 

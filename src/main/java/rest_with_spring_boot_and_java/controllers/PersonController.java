@@ -4,12 +4,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import rest_with_spring_boot_and_java.data.dto.PersonDTO;
 import rest_with_spring_boot_and_java.model.Person;
 import rest_with_spring_boot_and_java.service.PersonService;
 
-import javax.print.attribute.standard.Media;
 import java.util.List;
-import java.util.logging.Logger;
 
 @RestController
 @RequestMapping("/person")
@@ -19,27 +18,27 @@ public class PersonController {
     private PersonService personService;
 
     @GetMapping(value = "{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Person findById(@PathVariable("id") Long  id) {
+    public PersonDTO findById(@PathVariable("id") Long  id) {
         return personService.findById(id);
     }
 
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Person> findAll() {
+    public List<PersonDTO> findAll() {
         return personService.findAll();
     }
 
     @PostMapping(
             produces = MediaType.APPLICATION_JSON_VALUE,
             consumes = MediaType.APPLICATION_JSON_VALUE )
-    public Person createPerson(@RequestBody Person person) {
+    public PersonDTO createPerson(@RequestBody PersonDTO person) {
         return personService.createPerson(person);
     }
 
     @PutMapping(
             produces = MediaType.APPLICATION_JSON_VALUE,
             consumes = MediaType.APPLICATION_JSON_VALUE )
-    public Person UpdatePerson(@RequestBody Person person) {
+    public PersonDTO UpdatePerson(@RequestBody PersonDTO person) {
         return personService.updatePerson(person);
     }
 
