@@ -17,33 +17,33 @@ public class PersonController {
     @Autowired
     private PersonService personService;
 
-    @GetMapping(value = "{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public PersonDTO findById(@PathVariable("id") Long  id) {
+    @GetMapping(value = "{id}", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_YAML_VALUE})
+    public PersonDTO findById(@PathVariable("id") Long id) {
         return personService.findById(id);
     }
 
 
-    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_YAML_VALUE})
     public List<PersonDTO> findAll() {
         return personService.findAll();
     }
 
     @PostMapping(
-            produces = MediaType.APPLICATION_JSON_VALUE,
-            consumes = MediaType.APPLICATION_JSON_VALUE )
+            produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_YAML_VALUE},
+            consumes = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_YAML_VALUE})
     public PersonDTO createPerson(@RequestBody PersonDTO person) {
         return personService.createPerson(person);
     }
 
     @PutMapping(
-            produces = MediaType.APPLICATION_JSON_VALUE,
-            consumes = MediaType.APPLICATION_JSON_VALUE )
+            produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_YAML_VALUE},
+            consumes = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_YAML_VALUE})
     public PersonDTO UpdatePerson(@RequestBody PersonDTO person) {
         return personService.updatePerson(person);
     }
 
-    @DeleteMapping(value = "{id}" )
-    public ResponseEntity<?> deletePerson(@PathVariable ("id") Long id) {
+    @DeleteMapping(value = "{id}")
+    public ResponseEntity<?> deletePerson(@PathVariable("id") Long id) {
         personService.deletePerson(id);
         return ResponseEntity.noContent().build();
     }
