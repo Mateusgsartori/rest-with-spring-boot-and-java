@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b23e647f-8855-49a3-b636-0b70b786e0cb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/controllers/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/controllers/PersonController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/data/dto/PersonDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/data/dto/PersonDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/service/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/service/PersonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/controllers/PersonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/controllers/PersonController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/data/dto/PersonDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/data/dto/PersonDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/service/PersonService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/service/PersonService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

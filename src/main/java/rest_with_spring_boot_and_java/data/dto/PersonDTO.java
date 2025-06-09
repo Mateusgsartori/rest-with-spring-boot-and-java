@@ -5,13 +5,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.hateoas.RepresentationModel;
 
 import java.io.Serializable;
 
 @Getter
 @Setter
 @JsonPropertyOrder({"id", "first_name", "last_name", "address", "gender"})
-public class PersonDTO implements Serializable {
+public class PersonDTO extends RepresentationModel<PersonDTO> implements Serializable {
     private Long id;
     @JsonProperty("first_name")
     private String firstName;

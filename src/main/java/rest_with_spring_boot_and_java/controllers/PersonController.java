@@ -38,7 +38,7 @@ public class PersonController {
     @PutMapping(
             produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_YAML_VALUE},
             consumes = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_YAML_VALUE})
-    public PersonDTO UpdatePerson(@RequestBody PersonDTO person) {
+    public PersonDTO updatePerson(@RequestBody PersonDTO person) {
         return personService.updatePerson(person);
     }
 
