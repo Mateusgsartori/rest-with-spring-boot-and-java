@@ -16,5 +16,8 @@ spring:
 logging:
   level:
     rest-with-spring-boot-and-java: DEBUG
-
+spring-doc:
+  paths-to-match: /api/**/**
+  swagger-ui:
+    use-root-path: true
 

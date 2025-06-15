@@ -5,14 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b23e647f-8855-49a3-b636-0b70b786e0cb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/controllers/docs/PersonControllerDocs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/controllers/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/controllers/PersonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/data/dto/PersonDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/data/dto/PersonDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/service/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/service/PersonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/controllers/PersonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/controllers/PersonController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/data/dto/PersonDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/data/dto/PersonDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/handler/CustomizedEntityResponseHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/handler/CustomizedEntityResponseHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/service/PersonService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/service/PersonService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/rest-with-spring-boot-and-java-0.0.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/rest-with-spring-boot-and-java-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-rest_with_spring_boot_and_java.RestWithSpringBootAndJavaApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-rest_with_spring_boot_and_java.RestWithSpringBootAndJavaApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/rest_with_spring_boot_and_java.RestWithSpringBootAndJavaApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/rest_with_spring_boot_and_java.RestWithSpringBootAndJavaApplicationTests.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,9 +37,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Record" />
-        <option value="Interface" />
         <option value="Exception" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -49,6 +60,10 @@
     &quot;Application.StartUp.executor&quot;: &quot;Debug&quot;,
     &quot;JUnit.ObjectMapperTests.executor&quot;: &quot;Run&quot;,
     &quot;Maven.rest-with-spring-boot-and-java [clean...].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.rest-with-spring-boot-and-java [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.rest-with-spring-boot-and-java [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.rest-with-spring-boot-and-java-erudio [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.rest-with-spring-boot-and-java-erudio [install].executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
