@@ -63,19 +63,19 @@ public interface PersonControllerDocs {
             })
     PersonDTO createPerson(@RequestBody PersonDTO person);
 
-    @Operation(summary = "Updates a person",
-            description = "Updates a person by it's id",
-            tags = {"People"},
-            responses = {
-                    @ApiResponse(description = "No content", responseCode = "204", content = @Content),
-                    @ApiResponse(description = "Internal server error", responseCode = "500", content = @Content),
-                    @ApiResponse(description = "Not found", responseCode = "404", content = @Content),
-                    @ApiResponse(description = "Unauthorized", responseCode = "401", content = @Content),
-                    @ApiResponse(description = "Bad request", responseCode = "400", content = @Content),
-                    @ApiResponse(description = "Success",
-                            responseCode = "404",
-                            content = @Content(schema = @Schema(implementation = PersonDTO.class)))
-            })
+        @Operation(summary = "Updates a person",
+                description = "Updates a person by it's id",
+                tags = {"People"},
+                responses = {
+                        @ApiResponse(description = "No content", responseCode = "204", content = @Content),
+                        @ApiResponse(description = "Internal server error", responseCode = "500", content = @Content),
+                        @ApiResponse(description = "Not found", responseCode = "404", content = @Content),
+                        @ApiResponse(description = "Unauthorized", responseCode = "401", content = @Content),
+                        @ApiResponse(description = "Bad request", responseCode = "400", content = @Content),
+                        @ApiResponse(description = "Success",
+                                responseCode = "404",
+                                content = @Content(schema = @Schema(implementation = PersonDTO.class)))
+                })
     PersonDTO updatePerson(@RequestBody PersonDTO person);
 
     @Operation(summary = "Deletes a person",
