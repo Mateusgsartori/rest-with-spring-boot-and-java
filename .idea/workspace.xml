@@ -5,21 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b23e647f-8855-49a3-b636-0b70b786e0cb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/controllers/docs/PersonControllerDocs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/controllers/docs/PersonControllerDocs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/handler/RequiredObjectIsNullException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/handler/RequiredObjectIsNullException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/RestWithSpringBootAndJavaApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/unittests/mapper/ObjectMapperTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/unittests/mapper/mocks/MockPerson.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-rest_with_spring_boot_and_java.RestWithSpringBootAndJavaApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-rest_with_spring_boot_and_java.RestWithSpringBootAndJavaApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-rest_with_spring_boot_and_java.unittests.mapper.ObjectMapperTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-rest_with_spring_boot_and_java.unittests.mapper.ObjectMapperTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/rest_with_spring_boot_and_java.RestWithSpringBootAndJavaApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/rest_with_spring_boot_and_java.RestWithSpringBootAndJavaApplicationTests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/rest_with_spring_boot_and_java.unittests.mapper.ObjectMapperTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/rest_with_spring_boot_and_java.unittests.mapper.ObjectMapperTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/config/TestConfigs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/config/TestConfigs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/config/WebConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/rest_with_spring_boot_and_java/config/TestConfigs.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/rest_with_spring_boot_and_java/config/TestConfigs.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +30,7 @@
         <option value="Exception" />
         <option value="Class" />
         <option value="Interface" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -57,7 +52,9 @@
     "JUnit.All in rest-with-spring-boot-and-java (1).executor": "Debug",
     "JUnit.All in rest-with-spring-boot-and-java (2).executor": "Debug",
     "JUnit.All in rest-with-spring-boot-and-java (3).executor": "Run",
+    "JUnit.All in rest-with-spring-boot-and-java (4).executor": "Run",
     "JUnit.All in rest-with-spring-boot-and-java.executor": "Run",
+    "JUnit.BookServicesTest.update.executor": "Debug",
     "JUnit.ObjectMapperTests.executor": "Run",
     "Maven.rest-with-spring-boot-and-java [clean...].executor": "Run",
     "Maven.rest-with-spring-boot-and-java [clean].executor": "Run",
@@ -67,6 +64,8 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/a/spring/rest-with-spring-boot-and-java/src/main/resources/db/migration",
     "settings.editor.selected.configurable": "project.propCompiler"
@@ -84,18 +83,24 @@
       <recent name="C:\a\spring\rest-with-spring-boot-and-java\src\test\java\rest_with_spring_boot_and_java\unittests\mapper\mocks" />
       <recent name="C:\a\spring\rest-with-spring-boot-and-java\src\test\java\rest_with_spring_boot_and_java\unittests\mapper" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="rest_with_spring_boot_and_java.controllers.docs" />
     </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="rest_with_spring_boot_and_java.integrationtests" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="rest_with_spring_boot_and_java.integrationtests.dto" />
+      <recent name="rest_with_spring_boot_and_java.unittests.mapper.mocks" />
+      <recent name="rest_with_spring_boot_and_java.unittests.services" />
       <recent name="rest_with_spring_boot_and_java.model" />
       <recent name="rest_with_spring_boot_and_java.repository" />
-      <recent name="rest_with_spring_boot_and_java.service" />
-      <recent name="rest_with_spring_boot_and_java.data.dto" />
-      <recent name="rest_with_spring_boot_and_java.controllers.docs" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.StartUp">
+  <component name="RunManager" selected="JUnit.All in rest-with-spring-boot-and-java (4)">
     <configuration name="StartUp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="21" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -135,7 +140,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in rest-with-spring-boot-and-java" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in rest-with-spring-boot-and-java (4)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rest-with-spring-boot-and-java" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
@@ -145,11 +150,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in rest-with-spring-boot-and-java (4)" />
         <item itemvalue="Application.StartUp" />
         <item itemvalue="JUnit.All in rest-with-spring-boot-and-java (3)" />
         <item itemvalue="JUnit.All in rest-with-spring-boot-and-java (2)" />
         <item itemvalue="JUnit.All in rest-with-spring-boot-and-java (1)" />
-        <item itemvalue="JUnit.All in rest-with-spring-boot-and-java" />
       </list>
     </recent_temporary>
   </component>
