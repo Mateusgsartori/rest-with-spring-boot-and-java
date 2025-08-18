@@ -97,8 +97,7 @@ class BookServicesTest {
 
     @Test
     void create() {
-        Books book = input.mockEntity(1);
-        Books persisted = book;
+        Books persisted = input.mockEntity(1);
         persisted.setId(1L);
 
         BookDTO dto = input.mockDTO(1);

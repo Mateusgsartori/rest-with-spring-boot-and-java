@@ -1,8 +1,8 @@
 package rest_with_spring_boot_and_java.data.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.hateoas.RepresentationModel;
@@ -11,6 +11,7 @@ import java.io.Serializable;
 
 @Getter
 @Setter
+@EqualsAndHashCode(callSuper = false)
 @JsonPropertyOrder({"id", "first_name", "last_name", "address", "gender"})
 public class PersonDTO extends RepresentationModel<PersonDTO> implements Serializable {
     private Long id;
@@ -20,4 +21,5 @@ public class PersonDTO extends RepresentationModel<PersonDTO> implements Seriali
     private String lastName;
     private String address;
     private String gender;
+    private Boolean enabled;
 }

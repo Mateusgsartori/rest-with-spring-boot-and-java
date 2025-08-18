@@ -1,7 +1,12 @@
 package rest_with_spring_boot_and_java.service;
 
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
+
+import org.springframework.data.domain.Example;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import rest_with_spring_boot_and_java.controllers.PersonController;
 import rest_with_spring_boot_and_java.data.dto.PersonDTO;
@@ -9,12 +14,10 @@ import rest_with_spring_boot_and_java.handler.RequiredObjectIsNullException;
 import rest_with_spring_boot_and_java.handler.ResourceNotFoundException;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
-import static rest_with_spring_boot_and_java.mapper.ObjectMapper.parseObjectsLists;
 import static rest_with_spring_boot_and_java.mapper.ObjectMapper.parseObject;
 import rest_with_spring_boot_and_java.model.Person;
 import rest_with_spring_boot_and_java.repository.PersonRepository;
 
-import java.util.List;
 import java.util.logging.Logger;
 
 @Service
@@ -41,11 +44,16 @@ public class PersonService {
     }
 
 
-    public List<PersonDTO> findAll() {
+    public Page<PersonDTO> findAll(Pageable pageable) {
         logger.info("Finding everyone...");
-        var people =  parseObjectsLists(repository.findAll(), PersonDTO.class);
-        people.forEach(PersonService::addHateoasLinks);
-        return people;
+
+        var people = repository.findAll(pageable);
+
+        return people.map(person -> {
+            var dto = parseObject(person, PersonDTO.class);
+            addHateoasLinks(dto);
+            return dto;
+        });
     }
 
     public PersonDTO createPerson(PersonDTO person) {
@@ -87,11 +95,26 @@ public class PersonService {
 
     }
 
+    @Transactional
+    public PersonDTO disablePerson(Long id) {
+        logger.info("disabling a person...");
+        repository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("No records found for this id!"));
+
+        repository.disablePerson(id);
+
+        var entity = repository.findById(id).get();
+
+        return parseObject(entity, PersonDTO.class);
+
+    }
+
     private static void addHateoasLinks(PersonDTO dto) {
         dto.add(linkTo(methodOn(PersonController.class).findById(dto.getId())).withSelfRel().withType("GET"));
         dto.add(linkTo(methodOn(PersonController.class).deletePerson(dto.getId())).withRel("delete").withType("DELETE"));
-        dto.add(linkTo(methodOn(PersonController.class).findAll()).withRel("findAll").withType("GET"));
+        dto.add(linkTo(methodOn(PersonController.class).findAll(1, 12, "asc")).withRel("findAll").withType("GET"));
         dto.add(linkTo(methodOn(PersonController.class).createPerson(dto)).withRel("create").withType("POST"));
+        dto.add(linkTo(methodOn(PersonController.class).disablePerson(dto.getId())).withRel("disable").withType("PATCH"));
         dto.add(linkTo(methodOn(PersonController.class).updatePerson(dto)).withRel("update").withType("PUT"));
     }
 

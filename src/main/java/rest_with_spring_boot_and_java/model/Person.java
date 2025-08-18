@@ -25,5 +25,7 @@ public class Person implements Serializable {
     private String address;
     @Column(nullable = false, length = 6)
     private String gender;
+    @Column(nullable = false)
+    private Boolean enabled;
 
 }
