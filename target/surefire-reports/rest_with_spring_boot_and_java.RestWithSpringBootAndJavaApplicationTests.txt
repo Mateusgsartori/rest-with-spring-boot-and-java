@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: rest_with_spring_boot_and_java.RestWithSpringBootAndJavaApplicationTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 20.60 s -- in rest_with_spring_boot_and_java.RestWithSpringBootAndJavaApplicationTests

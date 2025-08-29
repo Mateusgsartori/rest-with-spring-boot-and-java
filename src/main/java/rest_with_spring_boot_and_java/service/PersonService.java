@@ -2,11 +2,17 @@ package rest_with_spring_boot_and_java.service;
 
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
+
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PagedResourcesAssembler;
+import org.springframework.hateoas.EntityModel;
+import org.springframework.hateoas.Link;
+import org.springframework.hateoas.PagedModel;
+import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.stereotype.Service;
 import rest_with_spring_boot_and_java.controllers.PersonController;
 import rest_with_spring_boot_and_java.data.dto.PersonDTO;
@@ -15,6 +21,7 @@ import rest_with_spring_boot_and_java.handler.ResourceNotFoundException;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 import static rest_with_spring_boot_and_java.mapper.ObjectMapper.parseObject;
+
 import rest_with_spring_boot_and_java.model.Person;
 import rest_with_spring_boot_and_java.repository.PersonRepository;
 
@@ -22,18 +29,21 @@ import java.util.logging.Logger;
 
 @Service
 public class PersonService {
-    
+
     private final Logger logger = Logger.getLogger(PersonService.class.getName());
 
     @Autowired
     PersonRepository repository;
+
+    @Autowired
+    PagedResourcesAssembler<PersonDTO> assembler;
 
 
     public PersonDTO findById(Long id) {
         logger.info("Finding a person...");
 
         var entity = repository.findById(id)
-                 .orElseThrow(() -> new ResourceNotFoundException("No records found for this id!"));
+                .orElseThrow(() -> new ResourceNotFoundException("No records found for this id!"));
 
         var dto = parseObject(entity, PersonDTO.class);
 
@@ -44,16 +54,34 @@ public class PersonService {
     }
 
 
-    public Page<PersonDTO> findAll(Pageable pageable) {
+    public PagedModel<EntityModel<PersonDTO>> findAll(Pageable pageable) {
         logger.info("Finding everyone...");
 
         var people = repository.findAll(pageable);
 
-        return people.map(person -> {
+        var peopleWithLinks = people.map(person -> {
             var dto = parseObject(person, PersonDTO.class);
             addHateoasLinks(dto);
             return dto;
         });
+
+        Link findAllLink = WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(PersonController.class).findAll(pageable.getPageNumber(), pageable.getPageSize(), String.valueOf(pageable.getSort()))).withSelfRel();
+
+        return assembler.toModel(peopleWithLinks, findAllLink);
+    }
+
+    public PagedModel<EntityModel<PersonDTO>> findPeopleByName(String firstName, Pageable pageable) {
+        var people = repository.findPeopleByName(firstName, pageable);
+
+        var peopleWithLinks = people.map(person -> {
+            var dto = parseObject(person, PersonDTO.class);
+            addHateoasLinks(dto);
+            return dto;
+        });
+
+        Link findAllLink = WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(PersonController.class).findAll(pageable.getPageNumber(), pageable.getPageSize(), String.valueOf(pageable.getSort()))).withSelfRel();
+
+        return assembler.toModel(peopleWithLinks, findAllLink);
     }
 
     public PersonDTO createPerson(PersonDTO person) {

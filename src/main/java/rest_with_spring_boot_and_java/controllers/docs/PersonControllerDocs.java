@@ -6,6 +6,8 @@ import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import org.springframework.data.domain.Page;
+import org.springframework.hateoas.EntityModel;
+import org.springframework.hateoas.PagedModel;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -47,11 +49,37 @@ public interface PersonControllerDocs {
                                     )
                             })
             })
-    ResponseEntity<Page<PersonDTO>> findAll(
+    ResponseEntity<PagedModel<EntityModel<PersonDTO>>> findAll(
                     @RequestParam(value = "page", defaultValue = "0") Integer page,
                     @RequestParam(value = "size", defaultValue = "12") Integer size,
                     @RequestParam(value = "direction", defaultValue = "asc") String direction
             );
+
+
+    @Operation(summary = "Finds people by first name",
+            description = "Finds people by their firstName",
+            tags = {"People"},
+            responses = {
+                    @ApiResponse(description = "No content", responseCode = "204", content = @Content),
+                    @ApiResponse(description = "Internal server error", responseCode = "500", content = @Content),
+                    @ApiResponse(description = "Not found", responseCode = "404", content = @Content),
+                    @ApiResponse(description = "Unauthorized", responseCode = "401", content = @Content),
+                    @ApiResponse(description = "Bad request", responseCode = "400", content = @Content),
+                    @ApiResponse(description = "Success",
+                            responseCode = "404",
+                            content = {
+                                    @Content(
+                                            mediaType = MediaType.APPLICATION_JSON_VALUE,
+                                            array = @ArraySchema(schema = @Schema(implementation = PersonDTO.class))
+                                    )
+                            })
+            })
+    ResponseEntity<PagedModel<EntityModel<PersonDTO>>> findPeopleByName(
+            @PathVariable("firstName") String firstName,
+            @RequestParam(value = "page", defaultValue = "0") Integer page,
+            @RequestParam(value = "size", defaultValue = "12") Integer size,
+            @RequestParam(value = "direction", defaultValue = "asc") String direction
+    );
 
     @Operation(summary = "creates a person",
             description = "creates a new person",
