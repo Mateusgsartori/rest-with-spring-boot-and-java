@@ -6,47 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b23e647f-8855-49a3-b636-0b70b786e0cb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/controllers/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/controllers/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/controllers/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/controllers/PersonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/controllers/docs/BookControllerDocs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/controllers/docs/BookControllerDocs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/controllers/docs/PersonControllerDocs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/controllers/docs/PersonControllerDocs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/data/dto/PersonDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/data/dto/PersonDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/repository/PersonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/repository/PersonRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/service/BookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/service/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/service/PersonService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/config/TestConfigs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/config/TestConfigs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/integrationtests/controllers/withjson/PersonControllerJsonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/integrationtests/controllers/withjson/PersonControllerJsonTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/integrationtests/controllers/withxml/PersonControllerXmlTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/integrationtests/controllers/withxml/PersonControllerXmlTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/integrationtests/controllers/withyaml/PersonControllerYamlTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/integrationtests/controllers/withyaml/PersonControllerYamlTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/unittests/services/BookServicesTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/unittests/services/PersonServicesTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/controllers/BookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/controllers/BookController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/controllers/PersonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/controllers/PersonController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/controllers/docs/BookControllerDocs.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/controllers/docs/BookControllerDocs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/controllers/docs/PersonControllerDocs.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/controllers/docs/PersonControllerDocs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/data/dto/PersonDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/data/dto/PersonDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/repository/PersonRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/repository/PersonRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/service/BookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/service/BookService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/service/PersonService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/service/PersonService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rest-with-spring-boot-and-java-0.0.1-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rest-with-spring-boot-and-java-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-rest_with_spring_boot_and_java.RestWithSpringBootAndJavaApplicationTests.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-rest_with_spring_boot_and_java.unittests.mapper.ObjectMapperTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-rest_with_spring_boot_and_java.unittests.mapper.ObjectMapperTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/rest_with_spring_boot_and_java.RestWithSpringBootAndJavaApplicationTests.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/rest_with_spring_boot_and_java.unittests.mapper.ObjectMapperTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/rest_with_spring_boot_and_java.unittests.mapper.ObjectMapperTests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/rest_with_spring_boot_and_java/integrationtests/controllers/withjson/PersonControllerJsonTest$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/rest_with_spring_boot_and_java/integrationtests/controllers/withjson/PersonControllerJsonTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/rest_with_spring_boot_and_java/integrationtests/controllers/withjson/PersonControllerJsonTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/rest_with_spring_boot_and_java/integrationtests/controllers/withxml/PersonControllerXmlTest$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/rest_with_spring_boot_and_java/integrationtests/controllers/withxml/PersonControllerXmlTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/rest_with_spring_boot_and_java/integrationtests/controllers/withxml/PersonControllerXmlTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/rest_with_spring_boot_and_java/integrationtests/controllers/withyaml/PersonControllerYamlTest$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/rest_with_spring_boot_and_java/integrationtests/controllers/withyaml/PersonControllerYamlTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/rest_with_spring_boot_and_java/integrationtests/controllers/withyaml/PersonControllerYamlTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/rest_with_spring_boot_and_java/unittests/services/BookServicesTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/rest_with_spring_boot_and_java/unittests/services/PersonServicesTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/handler/CustomizedEntityResponseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/handler/CustomizedEntityResponseHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/handler/CustomizedEntityResponseHandler.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,8 +22,8 @@
       <list>
         <option value="Record" />
         <option value="Exception" />
-        <option value="Interface" />
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -136,14 +97,14 @@
       <recent name="rest_with_spring_boot_and_java.integrationtests" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="rest_with_spring_boot_and_java.handler" />
       <recent name="rest_with_spring_boot_and_java.unittests.controllers.cors.withjson" />
       <recent name="rest_with_spring_boot_and_java.integrationtests.controllers.withyaml" />
       <recent name="rest_with_spring_boot_and_java.integrationtests.controllers.withxml" />
       <recent name="rest_with_spring_boot_and_java.integrationtests.controllers.withjson" />
-      <recent name="rest_with_spring_boot_and_java.integrationtests.dto" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in rest-with-spring-boot-and-java">
+  <component name="RunManager" selected="Application.StartUp">
     <configuration name="StartUp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="rest_with_spring_boot_and_java.StartUp" />
       <module name="rest-with-spring-boot-and-java" />
@@ -167,8 +128,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in rest-with-spring-boot-and-java" />
         <item itemvalue="Application.StartUp" />
+        <item itemvalue="JUnit.All in rest-with-spring-boot-and-java" />
       </list>
     </recent_temporary>
   </component>
