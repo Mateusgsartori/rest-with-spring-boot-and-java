@@ -1,9 +1,9 @@
 package rest_with_spring_boot_and_java.integrationtests.swagger;
 
-import rest_with_spring_boot_and_java.config.TestConfigs;
-import rest_with_spring_boot_and_java.integrationtests.testcontainers.AbstractIntegrationTest;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import rest_with_spring_boot_and_java.config.TestConfigs;
+import rest_with_spring_boot_and_java.integrationtests.testcontainers.AbstractIntegrationTest;
 
 import static io.restassured.RestAssured.given;
 import static junit.framework.TestCase.assertTrue;

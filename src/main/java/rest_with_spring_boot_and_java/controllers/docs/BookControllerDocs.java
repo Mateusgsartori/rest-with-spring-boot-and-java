@@ -15,8 +15,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import rest_with_spring_boot_and_java.data.dto.BookDTO;
 import rest_with_spring_boot_and_java.data.dto.PersonDTO;
 
-import java.util.List;
-
 public interface BookControllerDocs {
     @Operation(summary = "Finds a book",
             description = "Finds a book by it's id",

@@ -1,19 +1,26 @@
 package rest_with_spring_boot_and_java.controllers;
 
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.Resource;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.PagedModel;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import rest_with_spring_boot_and_java.controllers.docs.PersonControllerDocs;
 import rest_with_spring_boot_and_java.data.dto.PersonDTO;
+import rest_with_spring_boot_and_java.file.exporter.MediaTypes;
 import rest_with_spring_boot_and_java.service.PersonService;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/person")
@@ -61,6 +68,14 @@ public class PersonController implements PersonControllerDocs {
         return personService.createPerson(person);
     }
 
+    @PostMapping(value = "/create-many-people",
+            produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_YAML_VALUE}
+    )
+    @Override
+    public List<PersonDTO> createManyPeople(@RequestParam("file") MultipartFile file) {
+        return personService.createManyPeople(file);
+    }
+
     @PutMapping(
             produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_YAML_VALUE},
             consumes = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_YAML_VALUE})
@@ -80,6 +95,29 @@ public class PersonController implements PersonControllerDocs {
     @Override
     public PersonDTO disablePerson(Long id) {
         return personService.disablePerson(id);
+    }
+
+    @GetMapping(value = "export-page", produces = {MediaTypes.APPLICATION_XLSX_VALUE, MediaTypes.APPLICATION_CSV_VALUE})
+    @Override
+    public ResponseEntity<Resource> exportPage(Integer page, Integer size, String direction, HttpServletRequest request) {
+
+        var sortDirection = "desc".equalsIgnoreCase(direction) ? Direction.DESC : Direction.ASC;
+        Pageable pageable = PageRequest.of(page, size, Sort.by(sortDirection, "firstName"));
+
+        String accpetHeader = request.getHeader(HttpHeaders.ACCEPT);
+
+
+        Resource file = personService.exportPage(pageable, accpetHeader);
+
+        String contentType = accpetHeader != null ? accpetHeader : "application/octet-stream";
+
+        String fileExtention = MediaTypes.APPLICATION_XLSX_VALUE.equalsIgnoreCase(accpetHeader) ? ".xlsx" : ".csv";
+        String filename = "people_exported" + fileExtention;
+
+        return ResponseEntity.ok()
+                .contentType(MediaType.parseMediaType(contentType))
+                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + filename + "\"")
+                .body(file);
     }
 
 

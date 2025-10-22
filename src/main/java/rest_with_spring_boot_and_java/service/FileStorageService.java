@@ -9,8 +9,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 import rest_with_spring_boot_and_java.config.FileStorageConfig;
-import rest_with_spring_boot_and_java.handler.FileNotFoundException;
-import rest_with_spring_boot_and_java.handler.FileStorageException;
+import rest_with_spring_boot_and_java.exception.FileNotFoundException;
+import rest_with_spring_boot_and_java.exception.FileStorageException;
 
 import java.nio.file.Files;
 import java.nio.file.Path;

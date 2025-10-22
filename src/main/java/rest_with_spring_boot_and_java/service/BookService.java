@@ -10,12 +10,10 @@ import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.stereotype.Service;
 import rest_with_spring_boot_and_java.controllers.BookController;
 import rest_with_spring_boot_and_java.data.dto.BookDTO;
-
-import rest_with_spring_boot_and_java.handler.RequiredObjectIsNullException;
-import rest_with_spring_boot_and_java.handler.ResourceNotFoundException;
+import rest_with_spring_boot_and_java.exception.RequiredObjectIsNullException;
+import rest_with_spring_boot_and_java.exception.ResourceNotFoundException;
 import rest_with_spring_boot_and_java.model.Books;
 import rest_with_spring_boot_and_java.repository.BookRepository;
-
 
 import java.util.logging.Logger;
 

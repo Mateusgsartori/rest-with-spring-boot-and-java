@@ -1,19 +1,16 @@
 package rest_with_spring_boot_and_java.unittests.mapper;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static rest_with_spring_boot_and_java.mapper.ObjectMapper.parseObject;
-import static rest_with_spring_boot_and_java.mapper.ObjectMapper.parseObjectsLists;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import rest_with_spring_boot_and_java.data.dto.PersonDTO;
+import rest_with_spring_boot_and_java.model.Person;
+import rest_with_spring_boot_and_java.unittests.mapper.mocks.MockPerson;
 
 import java.util.List;
 
-
-import rest_with_spring_boot_and_java.unittests.mapper.mocks.MockPerson;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
-
-import rest_with_spring_boot_and_java.data.dto.PersonDTO;
-import rest_with_spring_boot_and_java.model.Person;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static rest_with_spring_boot_and_java.mapper.ObjectMapper.parseObject;
+import static rest_with_spring_boot_and_java.mapper.ObjectMapper.parseObjectsLists;
 
 public class ObjectMapperTests {
     MockPerson inputObject;

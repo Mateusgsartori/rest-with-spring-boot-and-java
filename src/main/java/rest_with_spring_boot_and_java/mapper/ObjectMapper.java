@@ -1,6 +1,5 @@
 package rest_with_spring_boot_and_java.mapper;
 
-import com.github.dozermapper.core.DozerBeanMapper;
 import com.github.dozermapper.core.DozerBeanMapperBuilder;
 import com.github.dozermapper.core.Mapper;
 
