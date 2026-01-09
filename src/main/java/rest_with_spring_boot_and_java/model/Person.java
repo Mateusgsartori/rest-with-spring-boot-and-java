@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
+import java.util.List;
 
 @Getter
 @Setter
@@ -27,5 +28,15 @@ public class Person implements Serializable {
     private String gender;
     @Column(nullable = false)
     private Boolean enabled;
+    @Column(name = "wikipedia_profile_url")
+    private String wikipediaProfileUrl;
+    @Column(name = "photo_url")
+    private String photoUrl;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "person_books",
+            joinColumns = @JoinColumn(name = "person_id"),
+            inverseJoinColumns = @JoinColumn(name = "book_id"))
+    private List<Books> books;
 
 }

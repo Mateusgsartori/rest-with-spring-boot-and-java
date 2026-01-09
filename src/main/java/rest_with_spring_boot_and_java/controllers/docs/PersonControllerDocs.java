@@ -31,10 +31,28 @@ public interface PersonControllerDocs {
                     @ApiResponse(description = "Unauthorized", responseCode = "401", content = @Content),
                     @ApiResponse(description = "Bad request", responseCode = "400", content = @Content),
                     @ApiResponse(description = "Success",
-                            responseCode = "404",
+                            responseCode = "200",
                             content = @Content(schema = @Schema(implementation = PersonDTO.class)))
             })
+
     PersonDTO findById(@PathVariable("id") Long id);
+
+
+    @Operation(summary = "Exports a person data as PDF",
+            description = "Exports a person data as PDF",
+            tags = {"People"},
+            responses = {
+                    @ApiResponse(description = "No content", responseCode = "204", content = @Content),
+                    @ApiResponse(description = "Internal server error", responseCode = "500", content = @Content),
+                    @ApiResponse(description = "Not found", responseCode = "404", content = @Content),
+                    @ApiResponse(description = "Unauthorized", responseCode = "401", content = @Content),
+                    @ApiResponse(description = "Bad request", responseCode = "400", content = @Content),
+                    @ApiResponse(description = "Success",
+                            responseCode = "200",
+                            content = @Content(mediaType = MediaTypes.APPLICATION_PDF_VALUE))
+            })
+    ResponseEntity<Resource> export(@PathVariable("id") Long id,
+                                    HttpServletRequest request);
 
     @Operation(summary = "Finds all people",
             description = "Finds all people",
@@ -46,7 +64,7 @@ public interface PersonControllerDocs {
                     @ApiResponse(description = "Unauthorized", responseCode = "401", content = @Content),
                     @ApiResponse(description = "Bad request", responseCode = "400", content = @Content),
                     @ApiResponse(description = "Success",
-                            responseCode = "404",
+                            responseCode = "200",
                             content = {
                                     @Content(
                                             mediaType = MediaType.APPLICATION_JSON_VALUE,
@@ -70,7 +88,7 @@ public interface PersonControllerDocs {
                     @ApiResponse(description = "Unauthorized", responseCode = "401", content = @Content),
                     @ApiResponse(description = "Bad request", responseCode = "400", content = @Content),
                     @ApiResponse(description = "Success",
-                            responseCode = "404",
+                            responseCode = "200",
                             content = {
                                     @Content(schema = @Schema(implementation = PersonDTO.class))
                             }),
@@ -88,7 +106,7 @@ public interface PersonControllerDocs {
                     @ApiResponse(description = "Unauthorized", responseCode = "401", content = @Content),
                     @ApiResponse(description = "Bad request", responseCode = "400", content = @Content),
                     @ApiResponse(description = "Success",
-                            responseCode = "404",
+                            responseCode = "200",
                             content = {
                                     @Content(
                                             mediaType = MediaType.APPLICATION_JSON_VALUE,
@@ -113,7 +131,7 @@ public interface PersonControllerDocs {
                     @ApiResponse(description = "Unauthorized", responseCode = "401", content = @Content),
                     @ApiResponse(description = "Bad request", responseCode = "400", content = @Content),
                     @ApiResponse(description = "Success",
-                            responseCode = "404",
+                            responseCode = "200",
                             content = @Content(schema = @Schema(implementation = PersonDTO.class)))
             })
     PersonDTO createPerson(@RequestBody PersonDTO person);
@@ -128,7 +146,7 @@ public interface PersonControllerDocs {
                     @ApiResponse(description = "Unauthorized", responseCode = "401", content = @Content),
                     @ApiResponse(description = "Bad request", responseCode = "400", content = @Content),
                     @ApiResponse(description = "Success",
-                            responseCode = "404",
+                            responseCode = "200",
                             content = @Content(schema = @Schema(implementation = PersonDTO.class)))
             })
     PersonDTO updatePerson(@RequestBody PersonDTO person);
@@ -143,7 +161,7 @@ public interface PersonControllerDocs {
                     @ApiResponse(description = "Unauthorized", responseCode = "401", content = @Content),
                     @ApiResponse(description = "Bad request", responseCode = "400", content = @Content),
                     @ApiResponse(description = "Success",
-                            responseCode = "404",
+                            responseCode = "200",
                             content = @Content(schema = @Schema(implementation = PersonDTO.class)))
             })
     ResponseEntity<?> deletePerson(@PathVariable("id") Long id);
@@ -158,7 +176,7 @@ public interface PersonControllerDocs {
                     @ApiResponse(description = "Unauthorized", responseCode = "401", content = @Content),
                     @ApiResponse(description = "Bad request", responseCode = "400", content = @Content),
                     @ApiResponse(description = "Success",
-                            responseCode = "404",
+                            responseCode = "200",
                             content = @Content(schema = @Schema(implementation = PersonDTO.class)))
             })
     PersonDTO disablePerson(@PathVariable("id") Long id);
@@ -173,7 +191,7 @@ public interface PersonControllerDocs {
                     @ApiResponse(description = "Unauthorized", responseCode = "401", content = @Content),
                     @ApiResponse(description = "Bad request", responseCode = "400", content = @Content),
                     @ApiResponse(description = "Success",
-                            responseCode = "404",
+                            responseCode = "200",
                             content = {
                                     @Content(mediaType = MediaTypes.APPLICATION_XLSX_VALUE),
                                     @Content(mediaType = MediaTypes.APPLICATION_CSV_VALUE)

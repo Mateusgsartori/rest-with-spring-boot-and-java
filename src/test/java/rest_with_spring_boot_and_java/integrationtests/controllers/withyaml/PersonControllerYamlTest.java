@@ -11,6 +11,7 @@ import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.specification.RequestSpecification;
 import org.junit.jupiter.api.*;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.http.MediaType;
 import rest_with_spring_boot_and_java.config.TestConfigs;
 import rest_with_spring_boot_and_java.integrationtests.dto.PersonDTO;
@@ -23,24 +24,33 @@ import static io.restassured.RestAssured.given;
 import static io.restassured.config.EncoderConfig.encoderConfig;
 import static org.junit.jupiter.api.Assertions.*;
 
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class PersonControllerYamlTest extends AbstractIntegrationTest {
+
+    @LocalServerPort
+    private int port;
 
     private static RequestSpecification specification;
     private static YAMLMapper objectMapper;
     private static PersonDTO person;
 
     @BeforeAll
-    static void setUp() {
+    static void init() {
         objectMapper = new YAMLMapper();
         objectMapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
         person = new PersonDTO();
+    }
 
+    @BeforeEach
+    void setUp() {
         specification = new RequestSpecBuilder()
-                .addHeader(TestConfigs.HEADER_PARAM_ORIGIN, TestConfigs.ORIGIN_SUCCESS_TEST)
+                .addHeader(
+                        TestConfigs.HEADER_PARAM_ORIGIN,
+                        "http://localhost:" + port
+                )
                 .setBasePath("/api/person")
-                .setPort(TestConfigs.SERVER_PORT)
+                .setPort(port)
                 .addFilter(new RequestLoggingFilter(LogDetail.ALL))
                 .addFilter(new ResponseLoggingFilter(LogDetail.ALL))
                 .build();
@@ -50,7 +60,10 @@ class PersonControllerYamlTest extends AbstractIntegrationTest {
         return given()
                 .config(RestAssuredConfig.config()
                         .encoderConfig(encoderConfig()
-                                .encodeContentTypeAs("application/yaml", io.restassured.http.ContentType.TEXT)))
+                                .encodeContentTypeAs(
+                                        "application/yaml",
+                                        io.restassured.http.ContentType.TEXT
+                                )))
                 .spec(specification);
     }
 
@@ -191,8 +204,8 @@ class PersonControllerYamlTest extends AbstractIntegrationTest {
         assertTrue(person.getId() > 0);
 
         assertEquals("Allin", person.getFirstName());
-        assertEquals("Otridge", person.getLastName());
-        assertEquals("09846 Independence Center", person.getAddress());
+        assertEquals("Emmot", person.getLastName());
+        assertEquals("7913 Lindbergh Way", person.getAddress());
         assertEquals("Male", person.getGender());
         assertFalse(person.getEnabled());
 
@@ -206,7 +219,7 @@ class PersonControllerYamlTest extends AbstractIntegrationTest {
         assertTrue(person.getId() > 0);
 
         assertEquals("Allin", person.getFirstName());
-        assertEquals("Emmot", person.getLastName());
+        assertEquals("Otridge", person.getLastName());
         assertEquals("7913 Lindbergh Way", person.getAddress());
         assertEquals("Male", person.getGender());
         assertFalse(person.getEnabled());

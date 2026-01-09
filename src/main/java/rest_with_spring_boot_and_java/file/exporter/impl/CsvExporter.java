@@ -6,7 +6,7 @@ import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
 import rest_with_spring_boot_and_java.data.dto.PersonDTO;
-import rest_with_spring_boot_and_java.file.exporter.contract.FileExporter;
+import rest_with_spring_boot_and_java.file.exporter.contract.PersonExporter;
 
 import java.io.ByteArrayOutputStream;
 import java.io.OutputStreamWriter;
@@ -14,10 +14,10 @@ import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 @Component
-public class CsvExporter implements FileExporter {
+public class CsvExporter implements PersonExporter {
 
     @Override
-    public Resource exportFile(List<PersonDTO> people) throws Exception {
+    public Resource exportPeople(List<PersonDTO> people) throws Exception {
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         OutputStreamWriter writer = new OutputStreamWriter(outputStream, StandardCharsets.UTF_8);
 
@@ -42,5 +42,10 @@ public class CsvExporter implements FileExporter {
         }
 
         return new ByteArrayResource(outputStream.toByteArray());
+    }
+
+    @Override
+    public Resource exportPerson(PersonDTO person) throws Exception {
+        return null;
     }
 }

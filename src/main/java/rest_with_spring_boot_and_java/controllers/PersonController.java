@@ -21,6 +21,7 @@ import rest_with_spring_boot_and_java.file.exporter.MediaTypes;
 import rest_with_spring_boot_and_java.service.PersonService;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/person")
@@ -34,6 +35,20 @@ public class PersonController implements PersonControllerDocs {
     @Override
     public PersonDTO findById(@PathVariable("id") Long id) {
         return personService.findById(id);
+    }
+
+    @Override
+    @GetMapping(value = "/export/{id}", produces = MediaType.APPLICATION_PDF_VALUE)
+    public ResponseEntity<Resource> export(@PathVariable("id") Long id, HttpServletRequest request) {
+
+        String accpetHeader = request.getHeader(HttpHeaders.ACCEPT);
+
+        Resource file = personService.exportPerson(id, accpetHeader);
+
+        return ResponseEntity.ok()
+                .contentType(MediaType.parseMediaType(accpetHeader))
+                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=person.pdf")
+                .body(file);
     }
 
 
@@ -97,7 +112,7 @@ public class PersonController implements PersonControllerDocs {
         return personService.disablePerson(id);
     }
 
-    @GetMapping(value = "export-page", produces = {MediaTypes.APPLICATION_XLSX_VALUE, MediaTypes.APPLICATION_CSV_VALUE})
+    @GetMapping(value = "export-page", produces = {MediaTypes.APPLICATION_XLSX_VALUE, MediaTypes.APPLICATION_CSV_VALUE, MediaTypes.APPLICATION_PDF_VALUE})
     @Override
     public ResponseEntity<Resource> exportPage(Integer page, Integer size, String direction, HttpServletRequest request) {
 
@@ -109,9 +124,17 @@ public class PersonController implements PersonControllerDocs {
 
         Resource file = personService.exportPage(pageable, accpetHeader);
 
+        Map<String, String> extensionMap = Map.of(
+                MediaTypes.APPLICATION_XLSX_VALUE, ".xlsx",
+                MediaTypes.APPLICATION_CSV_VALUE, ".csv",
+                MediaTypes.APPLICATION_PDF_VALUE, ".pdf"
+        );
+
+        String fileExtention = extensionMap.getOrDefault(accpetHeader, "");
+
         String contentType = accpetHeader != null ? accpetHeader : "application/octet-stream";
 
-        String fileExtention = MediaTypes.APPLICATION_XLSX_VALUE.equalsIgnoreCase(accpetHeader) ? ".xlsx" : ".csv";
+
         String filename = "people_exported" + fileExtention;
 
         return ResponseEntity.ok()

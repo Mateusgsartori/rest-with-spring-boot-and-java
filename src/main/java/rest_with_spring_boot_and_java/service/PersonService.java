@@ -18,7 +18,7 @@ import rest_with_spring_boot_and_java.exception.BadRequestException;
 import rest_with_spring_boot_and_java.exception.FileStorageException;
 import rest_with_spring_boot_and_java.exception.RequiredObjectIsNullException;
 import rest_with_spring_boot_and_java.exception.ResourceNotFoundException;
-import rest_with_spring_boot_and_java.file.exporter.contract.FileExporter;
+import rest_with_spring_boot_and_java.file.exporter.contract.PersonExporter;
 import rest_with_spring_boot_and_java.file.exporter.factory.FileExporterFactory;
 import rest_with_spring_boot_and_java.file.importer.contract.FileImporter;
 import rest_with_spring_boot_and_java.file.importer.factory.FileImporterFactory;
@@ -63,14 +63,30 @@ public class PersonService {
 
     }
 
+    public Resource exportPerson(Long id, String acceptHeader) {
+        logger.info("Exporting a person data...");
+
+        var entity = repository.findById(id).map(p -> parseObject(p, PersonDTO.class))
+                .orElseThrow(() -> new ResourceNotFoundException("No records found for this id!"));
+
+
+        try {
+            PersonExporter exporter = this.exporter.getExporter(acceptHeader);
+            return exporter.exportPerson(entity);
+        } catch (Exception e) {
+            throw new RuntimeException("Error while exporting file!", e);
+        }
+
+    }
+
     public Resource exportPage(Pageable pageable, String acceptHeader) {
         logger.info("Exporting a people page");
         var people = repository.findAll(pageable)
                 .map(p -> parseObject(p, PersonDTO.class)).getContent();
 
         try {
-            FileExporter exporter = this.exporter.getExporter(acceptHeader);
-            return exporter.exportFile(people);
+            PersonExporter exporter = this.exporter.getExporter(acceptHeader);
+            return exporter.exportPeople(people);
         } catch (Exception e) {
             throw new RuntimeException("Error while exporting file!", e);
         }

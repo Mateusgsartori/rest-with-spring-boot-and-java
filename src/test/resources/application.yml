@@ -24,7 +24,13 @@ spring:
       max-request-size: 215MB
 logging:
   level:
-    rest-with-spring-boot-and-java: DEBUG
+    root: INFO
+    org.springframework: DEBUG
+    org.springframework.boot.context: DEBUG
+    org.springframework.test.context: DEBUG
+    org.hibernate: DEBUG
+    org.testcontainers: DEBUG
+    rest_with_spring_boot_and_java: TRACE
 spring-doc:
   paths-to-match: /api/**/**
   swagger-ui:

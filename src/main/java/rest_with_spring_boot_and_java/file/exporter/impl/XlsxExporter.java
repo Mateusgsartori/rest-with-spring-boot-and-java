@@ -6,16 +6,16 @@ import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
 import rest_with_spring_boot_and_java.data.dto.PersonDTO;
-import rest_with_spring_boot_and_java.file.exporter.contract.FileExporter;
+import rest_with_spring_boot_and_java.file.exporter.contract.PersonExporter;
 
 import java.io.ByteArrayOutputStream;
 import java.util.List;
 
 @Component
-public class XlsxExporter implements FileExporter {
+public class XlsxExporter implements PersonExporter {
 
     @Override
-    public Resource exportFile(List<PersonDTO> people) throws Exception {
+    public Resource exportPeople(List<PersonDTO> people) throws Exception {
 
        try (Workbook workbook = new XSSFWorkbook()) {
            Sheet sheet = workbook.createSheet("People");
@@ -48,6 +48,11 @@ public class XlsxExporter implements FileExporter {
            return new ByteArrayResource(outputStream.toByteArray());
        }
 
+    }
+
+    @Override
+    public Resource exportPerson(PersonDTO person) throws Exception {
+        return null;
     }
 
     private CellStyle createHeaderCellStyle(Workbook workbook) {
