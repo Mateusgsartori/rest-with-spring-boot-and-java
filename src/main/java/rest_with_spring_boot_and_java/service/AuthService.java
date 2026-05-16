@@ -1,0 +1,104 @@
+package rest_with_spring_boot_and_java.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.DelegatingPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.crypto.password.Pbkdf2PasswordEncoder;
+import org.springframework.stereotype.Service;
+import rest_with_spring_boot_and_java.data.dto.PersonDTO;
+import rest_with_spring_boot_and_java.data.dto.security.AccountCredentialsDTO;
+import rest_with_spring_boot_and_java.data.dto.security.TokenDTO;
+import rest_with_spring_boot_and_java.exception.RequiredObjectIsNullException;
+import rest_with_spring_boot_and_java.model.Person;
+import rest_with_spring_boot_and_java.model.User;
+import rest_with_spring_boot_and_java.repository.UserRepository;
+import rest_with_spring_boot_and_java.securiti.jwt.JwtTokenProvider;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import static rest_with_spring_boot_and_java.mapper.ObjectMapper.parseObject;
+
+@Service
+public class AuthService {
+
+    @Autowired
+    private AuthenticationManager authenticationManager;
+
+    @Autowired
+    private JwtTokenProvider tokenProvider;
+
+    @Autowired
+    private UserRepository repository;
+
+    public ResponseEntity<TokenDTO> signIn(AccountCredentialsDTO credentials) {
+        authenticationManager.authenticate(
+                new UsernamePasswordAuthenticationToken(
+                        credentials.getUsername(),
+                        credentials.getPassword()
+                )
+        );
+
+        var user = repository.findByUsername(credentials.getUsername());
+
+        if (user == null) {
+            throw new UsernameNotFoundException("Username " + credentials.getUsername() + " not found!");
+        }
+
+        var token = tokenProvider.createAccessToken(
+                credentials.getUsername(),
+                user.getRoles()
+        );
+
+
+        return ResponseEntity.ok(token);
+    }
+
+    public ResponseEntity<TokenDTO> refreshToken(String username, String refreshToken) {
+        var user = repository.findByUsername(username);
+        TokenDTO token;
+        if (user != null) {
+            token = tokenProvider.refreshToken(refreshToken);
+        } else {
+            throw new UsernameNotFoundException("Username " + username + " not found!");
+        }
+
+
+        return ResponseEntity.ok(token);
+    }
+
+    public AccountCredentialsDTO create(AccountCredentialsDTO user) {
+        if (user == null) {
+            throw new RequiredObjectIsNullException();
+        }
+        var entity = new User();
+        entity.setFullName(user.getFullName());
+        entity.setUsername(user.getUsername());
+        entity.setPassword(this.generatedHashedPassword(user.getPassword()));
+        entity.setAccountNonExpired(true);
+        entity.setAccountNonLocked(true);
+        entity.setCredentialsNonExpired(true);
+        entity.setEnabled(true);
+        return parseObject(repository.save(entity), AccountCredentialsDTO.class);
+
+    }
+
+    private String generatedHashedPassword(String password) {
+
+        PasswordEncoder pbkdf2Enconder = new Pbkdf2PasswordEncoder("", 8, 185000, Pbkdf2PasswordEncoder.SecretKeyFactoryAlgorithm.PBKDF2WithHmacSHA256);
+        Map<String, PasswordEncoder> encoders = new HashMap<>();
+
+        encoders.put("pbkdf2", pbkdf2Enconder);
+        DelegatingPasswordEncoder passwordEncoder = new DelegatingPasswordEncoder("pbkdf2", encoders);
+        passwordEncoder.setDefaultPasswordEncoderForMatches(pbkdf2Enconder);
+
+        return passwordEncoder.encode(password);
+
+    }
+
+
+    }
