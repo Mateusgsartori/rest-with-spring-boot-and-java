@@ -1,7 +1,12 @@
 cors:
-  originPatterns: http://localhost:8080,http://localhost:3000
+  originPatterns: http://localhost:8080,http://localhost:5173
 file:
   upload-dir: /a/upload-dir
+security:
+  jwt:
+    token:
+      secret-key: 53cr37
+      expire-length: 3600000
 email:
   subject: "Default subject"
   message: "Default message"
@@ -39,7 +44,9 @@ logging:
   level:
     rest-with-spring-boot-and-java: DEBUG
 spring-doc:
-  paths-to-match: /api/**/**
+  paths-to-match:
+  - /auth/**
+  - /api/**/**
   swagger-ui:
     use-root-path: true
 

@@ -8,9 +8,57 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/config/TestConfigs.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/integrationtests/controllers/cors/withjson/PersonControllerCorsTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/integrationtests/controllers/withjson/PersonControllerJsonTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/integrationtests/controllers/withxml/PersonControllerXmlTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/integrationtests/controllers/withyaml/PersonControllerYamlTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/integrationtests/dto/PersonDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/integrationtests/dto/wrapper/json/PersonEmbeddedDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/integrationtests/dto/wrapper/json/WrapperPersonDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/integrationtests/dto/wrapper/xml/PagedModelPerson.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/integrationtests/swagger/SwaggerIntegrationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/integrationtests/testcontainers/AbstractIntegrationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/unittests/controllers/withjson/BookControllerJsonTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/unittests/controllers/withxml/BookControllerXmlTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/unittests/controllers/withyaml/BookControllerYamlTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/unittests/dto/BookDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/unittests/dto/wrapper/json/BookEmbeddedDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/unittests/dto/wrapper/json/WrapperBookDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/unittests/dto/wrapper/xml/PagedModelBook.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/unittests/mapper/ObjectMapperTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/unittests/mapper/mocks/MockBook.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/unittests/mapper/mocks/MockPerson.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/unittests/testcontainers/AbstractIntegrationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/application.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/StartUp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/StartUp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/exception/handler/CustomizedEntityResponseHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rest_with_spring_boot_and_java/exception/handler/CustomizedEntityResponseHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/rest_with_spring_boot_and_java/config/TestConfigs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/rest_with_spring_boot_and_java/integrationtests/controllers/cors/withjson/PersonControllerCorsTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/rest_with_spring_boot_and_java/integrationtests/controllers/withjson/PersonControllerJsonTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/rest_with_spring_boot_and_java/integrationtests/controllers/withxml/PersonControllerXmlTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/rest_with_spring_boot_and_java/integrationtests/controllers/withyaml/PersonControllerYamlTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/rest_with_spring_boot_and_java/integrationtests/dto/PersonDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/rest_with_spring_boot_and_java/integrationtests/dto/wrapper/json/PersonEmbeddedDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/rest_with_spring_boot_and_java/integrationtests/dto/wrapper/json/WrapperPersonDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/rest_with_spring_boot_and_java/integrationtests/dto/wrapper/xml/PagedModelPerson.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/rest_with_spring_boot_and_java/integrationtests/swagger/SwaggerIntegrationTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/rest_with_spring_boot_and_java/integrationtests/testcontainers/AbstractIntegrationTest$Initializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/rest_with_spring_boot_and_java/integrationtests/testcontainers/AbstractIntegrationTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/rest_with_spring_boot_and_java/unittests/controllers/withjson/BookControllerJsonTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/rest_with_spring_boot_and_java/unittests/controllers/withxml/BookControllerXmlTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/rest_with_spring_boot_and_java/unittests/controllers/withyaml/BookControllerYamlTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/rest_with_spring_boot_and_java/unittests/dto/BookDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/rest_with_spring_boot_and_java/unittests/dto/wrapper/json/BookEmbeddedDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/rest_with_spring_boot_and_java/unittests/dto/wrapper/json/WrapperBookDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/rest_with_spring_boot_and_java/unittests/dto/wrapper/xml/PagedModelBook.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/rest_with_spring_boot_and_java/unittests/mapper/ObjectMapperTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/rest_with_spring_boot_and_java/unittests/mapper/mocks/MockBook.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/rest_with_spring_boot_and_java/unittests/mapper/mocks/MockPerson.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/rest_with_spring_boot_and_java/unittests/testcontainers/AbstractIntegrationTest$Initializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/rest_with_spring_boot_and_java/unittests/testcontainers/AbstractIntegrationTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,13 +74,17 @@
         <option value="Record" />
         <option value="Exception" />
         <option value="JUnit5 Test Class" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -45,52 +97,63 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.RestWithSpringBootAndJavaApplication.executor": "Run",
-    "Application.StartUp.executor": "Debug",
-    "JUnit.All in rest-with-spring-boot-and-java (1).executor": "Debug",
-    "JUnit.All in rest-with-spring-boot-and-java (2).executor": "Debug",
-    "JUnit.All in rest-with-spring-boot-and-java (3).executor": "Run",
-    "JUnit.All in rest-with-spring-boot-and-java (4).executor": "Run",
-    "JUnit.All in rest-with-spring-boot-and-java.executor": "Debug",
-    "JUnit.BookControllerXmlTest.executor": "Debug",
-    "JUnit.BookServicesTest.update.executor": "Debug",
-    "JUnit.ObjectMapperTests.executor": "Run",
-    "JUnit.PersonControllerCorsTest.executor": "Run",
-    "JUnit.PersonControllerJsonTest.disableTest.executor": "Debug",
-    "JUnit.PersonControllerYamlTest.createPerson.executor": "Run",
-    "Maven.rest-with-spring-boot-and-java [clean...].executor": "Run",
-    "Maven.rest-with-spring-boot-and-java [clean].executor": "Run",
-    "Maven.rest-with-spring-boot-and-java [install].executor": "Run",
-    "Maven.rest-with-spring-boot-and-java-erudio [clean].executor": "Run",
-    "Maven.rest-with-spring-boot-and-java-erudio [install].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/a/spring/rest-with-spring-boot-and-java/src/main/resources/reports",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.17",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "coverage"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.RestWithSpringBootAndJavaApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.StartUp.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.All in rest-with-spring-boot-and-java (1).executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.All in rest-with-spring-boot-and-java (2).executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.All in rest-with-spring-boot-and-java (3).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in rest-with-spring-boot-and-java (4).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in rest-with-spring-boot-and-java.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.BookControllerXmlTest.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.BookServicesTest.update.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.ObjectMapperTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PersonControllerCorsTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PersonControllerJsonTest.disableTest.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.PersonControllerYamlTest.createPerson.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SwaggerIntegrationTest.executor&quot;: &quot;Debug&quot;,
+    &quot;Maven.rest-with-spring-boot-and-java [clean...].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.rest-with-spring-boot-and-java [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.rest-with-spring-boot-and-java [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.rest-with-spring-boot-and-java-erudio [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.rest-with-spring-boot-and-java-erudio [install].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/a/spring/rest-with-spring-boot-and-java/src/main&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;coverage&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;,
+      &quot;postgresql&quot;
+    ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="rest_with_spring_boot_and_java.file.exporter.impl" />
       <recent name="rest_with_spring_boot_and_java.integrationtests.dto.wrapper" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\a\spring\rest-with-spring-boot-and-java\src\main" />
       <recent name="C:\a\spring\rest-with-spring-boot-and-java\src\main\resources\reports" />
       <recent name="C:\a\spring\rest-with-spring-boot-and-java\src\main\resources\db\migration" />
       <recent name="C:\a\spring\rest-with-spring-boot-and-java\src\main\java\rest_with_spring_boot_and_java\file\exporter" />
       <recent name="C:\a\spring\rest-with-spring-boot-and-java\src\test\java\rest_with_spring_boot_and_java\unittests\controllers\withyaml" />
-      <recent name="C:\a\spring\rest-with-spring-boot-and-java\src\test\java\rest_with_spring_boot_and_java\unittests\controllers\withxml" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\a\spring\rest-with-spring-boot-and-java\src" />
+      <recent name="C:\a\spring\rest-with-spring-boot-and-java\src\main\resources\db\migration" />
       <recent name="C:\a\spring\rest-with-spring-boot-and-java\src\test\java\rest_with_spring_boot_and_java\unittests\controllers\withyaml" />
       <recent name="C:\a\spring\rest-with-spring-boot-and-java\src\test\java\rest_with_spring_boot_and_java\unittests\mapper\mocks" />
       <recent name="C:\a\spring\rest-with-spring-boot-and-java\src\test\java\rest_with_spring_boot_and_java\unittests\mapper" />
@@ -108,11 +171,11 @@
       <recent name="rest_with_spring_boot_and_java.integrationtests" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="rest_with_spring_boot_and_java.exception" />
       <recent name="rest_with_spring_boot_and_java.exception.handler" />
       <recent name="rest_with_spring_boot_and_java.handler" />
       <recent name="rest_with_spring_boot_and_java.unittests.controllers.cors.withjson" />
       <recent name="rest_with_spring_boot_and_java.integrationtests.controllers.withyaml" />
-      <recent name="rest_with_spring_boot_and_java.integrationtests.controllers.withxml" />
     </key>
   </component>
   <component name="RunManager" selected="Application.StartUp">
@@ -134,7 +197,12 @@
     <configuration name="All in rest-with-spring-boot-and-java" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rest-with-spring-boot-and-java" />
       <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
+      <envs>
+        <env name="DOCKER_HOST" value="tcp://127.0.0.1:2375" />
+      </envs>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -154,18 +222,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SwaggerIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rest-with-spring-boot-and-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="rest_with_spring_boot_and_java.integrationtests.swagger.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="rest_with_spring_boot_and_java.integrationtests.swagger" />
+      <option name="MAIN_CLASS_NAME" value="rest_with_spring_boot_and_java.integrationtests.swagger.SwaggerIntegrationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.StartUp" />
       <item itemvalue="JUnit.All in rest-with-spring-boot-and-java" />
       <item itemvalue="JUnit.BookControllerXmlTest" />
+      <item itemvalue="JUnit.SwaggerIntegrationTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.StartUp" />
         <item itemvalue="JUnit.All in rest-with-spring-boot-and-java" />
+        <item itemvalue="JUnit.SwaggerIntegrationTest" />
         <item itemvalue="JUnit.BookControllerXmlTest" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.30387.90" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -189,6 +281,21 @@
           <url>file://$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/integrationtests/controllers/withyaml/PersonControllerYamlTest.java</url>
           <line>222</line>
           <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/unittests/testcontainers/AbstractIntegrationTest.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/rest_with_spring_boot_and_java/integrationtests/swagger/SwaggerIntegrationTest.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/rest_with_spring_boot_and_java/controllers/AuthController.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="31" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
